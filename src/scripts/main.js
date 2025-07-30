@@ -68,3 +68,23 @@ document.querySelectorAll(".nav-link").forEach(link => {
 });
 
 
+// Instagram Feed Integration
+// This code dynamically creates an iframe to embed the Instagram feed using SnapWidget
+  window.addEventListener('DOMContentLoaded', () => {
+    const iframe = document.createElement('iframe');
+    iframe.src = "https://snapwidget.com/embed/1100193";
+    iframe.className = "snapwidget-widget";
+    iframe.allowTransparency = true;
+    iframe.frameBorder = "0";
+    iframe.scrolling = "no";
+    iframe.style.border = "none";
+    iframe.style.overflow = "hidden";
+    iframe.style.width = "100%";
+    iframe.style.height = "510px";
+    iframe.title = "Posts from Instagram";
+    
+    document.querySelector('.instagram-feed-container').appendChild(iframe);
+  });
+
+
+
