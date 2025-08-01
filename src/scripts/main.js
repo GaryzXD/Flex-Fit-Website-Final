@@ -88,3 +88,37 @@ document.querySelectorAll(".nav-link").forEach(link => {
 
 
 
+document.getElementById("enquiryForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const name = this.name.value;
+  const phone = this.phone.value;
+  const email = this.email.value;
+  const message = this.message.value;
+
+  const enquiry = { name, phone, email, message };
+
+  try {
+    const response = await fetch("https://flexfit-backend-qvfc.onrender.com/api/enquiry", {
+
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(enquiry),
+    });
+
+    const result = await response.json();
+    if (response.ok) {
+      alert("✅ Enquiry submitted successfully!");
+      this.reset();
+    } else {
+      alert("❌ Failed to submit enquiry: " + result.error);
+    }
+  } catch (err) {
+    alert("⚠️ Error connecting to server.");
+    console.error(err);
+  }
+});
+
+
