@@ -1,0 +1,27 @@
+{
+  "name": "flex-fit-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GaryzXD/Flex-Fit-Website-Final.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GaryzXD/Flex-Fit-Website-Final/issues"
+  },
+  "homepage": "https://github.com/GaryzXD/Flex-Fit-Website-Final#readme",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mongodb": "^6.18.0",
+    "mongoose": "^8.17.0"
+  }
+}
