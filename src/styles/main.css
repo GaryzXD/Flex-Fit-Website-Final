@@ -635,31 +635,48 @@ footer nav a:hover,
 
 
 
-/* Gallry */
-.gallery-heading {
+/* Gallery Page Styles */
+.gallery {
+  padding: 50px 20px;
   text-align: center;
-  font-size: 3rem;
-  letter-spacing: 0.1em;
-  font-weight: 700;
-  color: #e6a31d;         /* Or any color you like */
-  margin: 40px 0 30px 0;  /* Top and bottom spacing */
-  text-transform: uppercase;
-  font-family: 'Poppins', sans-serif; /* Match your site font */
+}
 
+.gallery-heading {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #222;
+}
 
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
 
-  .instagram-feed-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 10px;
-  }
+.gallery-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
 
-  .snapwidget-widget {
-    width: 100%;
-    height: 800px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  }
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
 
+/* Instagram Feed Section */
+.instagram-feed {
+  padding: 50px 20px;
+  text-align: center;
+  background: #f7f7f7;
+}
 
+.instagram-feed h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
